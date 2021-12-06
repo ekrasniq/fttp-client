@@ -1,4 +1,4 @@
-package de.pseudonymisierung.fttp;
+package de.pseudonymization.fttp;
 
 import de.netzwerk_universitaetsmedizin.codex.processes.data_transfer.client.FttpClientImpl;
 import de.pseudoymisierung.mainzelliste.client.bloomfilter.BloomFilter;

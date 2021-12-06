@@ -2,10 +2,13 @@ package de.pseudoymisierung.mainzelliste.client.bloomfilter;
 
 import de.pseudonymisierung.mainzelliste.client.fttp.bloomfilter.RandomRecordBloomFilterGenerator;
 import de.pseudonymisierung.mainzelliste.client.fttp.normalization.FieldsNormalization;
+
 import de.ukhd.medic.mpi.MpiRunner;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
 public class GenerateBloomFilter {
     private static final String HOST = "icwmpi99";

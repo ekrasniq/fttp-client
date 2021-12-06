@@ -1,4 +1,4 @@
-package de.pseudonymisierung.mainzelliste.client.bloomfilter;
+package de.pseudonymization.mainzelliste.client.bloomfilter;
 
 import de.pseudoymisierung.mainzelliste.client.bloomfilter.BloomFilter;
 
