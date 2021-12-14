@@ -10,6 +10,7 @@ import de.ukhd.medic.mpi.message.MessageHelper;
 import de.ukhd.medic.mpi.message.QueryParameter;
 import de.ukhd.medic.mpi.security.CustomSocketFactory;
 
+import java.lang.ref.SoftReference;
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,20 +18,16 @@ public class MpiRunner {
     private static final String HOST = "icwmpi99";
     private static final int ICW_PDQ_PORT = 3750;
 
-    public static HashMap<String, String> getIdatFromMpi(String pidAssigningAuthorityUniversalId) throws Exception {
+    public static HashMap<String, String> getIdatFromMpi(String pid, String pidAssigningAuthorityUniversalId) throws Exception {
         List<QueryParameter> searchParameters = List.of(
-                QueryParameter.createQueryParameterForQpd3("@PID.3.1", "0002038285"),
+                QueryParameter.createQueryParameterForQpd3("@PID.3.1", pid),
                 QueryParameter.createQueryParameterForQpd3("@PID.3.4.1", "SAP-ISH"),
-                QueryParameter.createQueryParameterForQpd3("@PID.3.4.2", "1.2.276.0.76.3.1.78.1.0.10.1.101.1"));
-
-        //		List<QueryParameter> searchParameters = List.of(
-        //			QueryParameter.createQueryParameterForNonQpd3("/QPD-8(0)-4", "ICWMPI"),
-        //			QueryParameter.createQueryParameterForQpd3("@PID.5.1", "T*"));
+                QueryParameter.createQueryParameterForQpd3("@PID.3.4.2", pidAssigningAuthorityUniversalId));
 
         QBP_Q21 query = new MessageHelper().createPatientDemographicsQuery("MBE01", "MeDIC", "ICW-MPI", "ICW",
                 searchParameters);
 
-        CustomSocketFactory customSocketFactory = new CustomSocketFactory(  "src/test/resources/ukhd-chain-with-root.pem",
+        CustomSocketFactory customSocketFactory = new CustomSocketFactory("src/test/resources/ukhd-chain-with-root.pem",
                 "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.pem",
                 "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.privatekey.pem", null);
 

@@ -16,7 +16,7 @@ public class GenerateBloomFilter {
 
 
 
-        protected static String generateBloomFilter(String pidAssigningAuthorityUniversalId) throws Exception {
+        protected static String generateBloomFilter(String pid, String pidAssigningAuthorityUniversalId) throws Exception {
             // define how idat fields will be normalize
             Properties normalizationConfig = new Properties();
             normalizationConfig.put("field.firstName.transformer.0.type", "StringFieldTransformer");
@@ -49,7 +49,7 @@ public class GenerateBloomFilter {
             RandomRecordBloomFilterGenerator bloomFilterGenerator = new RandomRecordBloomFilterGenerator(bloomFilterConfig);
 
             // get idat from MPI
-            HashMap<String, String> idat = MpiRunner.getIdatFromMpi(pidAssigningAuthorityUniversalId);
+            HashMap<String, String> idat = MpiRunner.getIdatFromMpi(pid, pidAssigningAuthorityUniversalId);
 
             // prepare idat fields
             String datePattern = "yyyyMMdd";
