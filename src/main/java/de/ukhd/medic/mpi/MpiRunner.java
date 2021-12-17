@@ -18,7 +18,9 @@ public class MpiRunner {
     private static final String HOST = "icwmpi99";
     private static final int ICW_PDQ_PORT = 3750;
 
-    public static HashMap<String, String> getIdatFromMpi(String pid, String pidAssigningAuthorityUniversalId) throws Exception {
+    public static HashMap<String, String> getIdatFromMpi(String pid, String pidAssigningAuthorityUniversalId, String pathToTrustCertificateFile,
+                                                         String pathToClientCertificateFile, String pathToClientCertificatePrivateKeyFile,
+                                                         char[] clientCertificatePrivateKeyPassword) throws Exception {
         List<QueryParameter> searchParameters = List.of(
                 QueryParameter.createQueryParameterForQpd3("@PID.3.1", pid),
                 QueryParameter.createQueryParameterForQpd3("@PID.3.4.1", "SAP-ISH"),
@@ -27,9 +29,7 @@ public class MpiRunner {
         QBP_Q21 query = new MessageHelper().createPatientDemographicsQuery("MBE01", "MeDIC", "ICW-MPI", "ICW",
                 searchParameters);
 
-        CustomSocketFactory customSocketFactory = new CustomSocketFactory("src/test/resources/ukhd-chain-with-root.pem",
-                "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.pem",
-                "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.privatekey.pem", null);
+        CustomSocketFactory customSocketFactory = new CustomSocketFactory(pathToTrustCertificateFile, pathToClientCertificateFile, pathToClientCertificatePrivateKeyFile, clientCertificatePrivateKeyPassword);
 
         MpiClient client = new MpiClientImpl(HOST, new DefaultHapiContext(), customSocketFactory);
         RSP_K21 response = client.sendPatientDemographicsQuery(ICW_PDQ_PORT, query);
