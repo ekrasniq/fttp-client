@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="mllp-client">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Dev/mllp-client/out/artifacts/mllp_client_jar/mllp-client.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/mllp-client/mllp_client_jar/mllp-client.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

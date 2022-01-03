@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="mainzelliste.client-fttp">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../mainzelliste.client-fttp-master/out/artifacts/mainzelliste_client_fttp_jar/mainzelliste.client-fttp.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/mainzerliste.client-fttp/mainzelliste_client_fttp_jar" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/mainzerliste.client-fttp/mainzelliste_client_fttp_jar" recursive="false" />
   </library>
 </component>

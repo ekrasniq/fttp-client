@@ -10,7 +10,6 @@ import de.ukhd.medic.mpi.message.MessageHelper;
 import de.ukhd.medic.mpi.message.QueryParameter;
 import de.ukhd.medic.mpi.security.CustomSocketFactory;
 
-import java.lang.ref.SoftReference;
 import java.util.HashMap;
 import java.util.List;
 
