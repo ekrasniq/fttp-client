@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.pseudonymization</groupId>
-    <artifactId>pseudonymization</artifactId>
-    <version>1</version>
+    <groupId>de.ukhd.medic.fttp-client</groupId>
+    <artifactId>fttp-client</artifactId>
+    <version>0.1</version>
      <packaging>jar</packaging>
 
     <properties>
