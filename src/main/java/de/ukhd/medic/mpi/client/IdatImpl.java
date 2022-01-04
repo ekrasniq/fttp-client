@@ -7,16 +7,16 @@ public class IdatImpl implements Idat
 	private final String medicId;
 	private final String firstName;
 	private final String lastName;
-	private final String birthday;
-	private final String sex;
+	private final String birthDate;
+	private final String gender;
 
-	public IdatImpl(String medicId, String firstName, String lastName, String birthday, String sex)
+	public IdatImpl(String medicId, String firstName, String lastName, String birthDate, String gender)
 	{
 		this.medicId = medicId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.birthday = birthday;
-		this.sex = sex;
+		this.birthDate = birthDate;
+		this.gender = gender;
 	}
 
 	@Override
@@ -38,15 +38,15 @@ public class IdatImpl implements Idat
 	}
 
 	@Override
-	public String getBirthday()
+	public String getBirthDate()
 	{
-		return birthday;
+		return birthDate;
 	}
 
 	@Override
-	public String getSex()
+	public String getGender()
 	{
-		return sex;
+		return gender;
 	}
 	@Override
 	public HashMap<String,String> getIdat()
@@ -56,8 +56,8 @@ public class IdatImpl implements Idat
 		idat.put("medicId", medicId);
 		idat.put("firstName", firstName);
 		idat.put("lastName", lastName);
-		idat.put("birthDate", birthday);
-		idat.put("sex", sex);
+		idat.put("birthDate", birthDate);
+		idat.put("gender", gender);
 		return idat;
 	}
 }

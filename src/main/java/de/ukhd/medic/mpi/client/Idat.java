@@ -25,7 +25,7 @@ public interface Idat
 	 * @return birthday formated as German date aka yyyy.MM.dd
 	 * @see Idat#GERMAN_DATE
 	 */
-	String getBirthday();
+	String getBirthDate();
 
 	/**
 	 * D - diverse (http://fhir.de/CodeSystem/gender-amtlich-de divers)<br>
@@ -37,7 +37,7 @@ public interface Idat
 	 *
 	 * @return {D, F, M, O, U, X}
 	 */
-	String getSex();
+	String getGender();
 
 	HashMap<String,String> getIdat();
 }

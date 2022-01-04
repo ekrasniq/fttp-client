@@ -59,7 +59,9 @@ public class MpiRunnerTest {
         try {
             Idat idat = new MessageHelper().extractPatientDemographics(response, "SAP-ISH",
                     "PID");
-            System.out.println("Gender of patient:" + idat.getSex());
+            for (String key: idat.getIdat().keySet()) {
+                System.out.println(key + ": " + idat.getIdat().get(key));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
