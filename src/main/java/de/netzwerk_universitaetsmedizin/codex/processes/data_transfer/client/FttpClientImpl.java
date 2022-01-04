@@ -27,7 +27,7 @@ public class FttpClientImpl implements FttpClient
 {
     private static final Logger logger = LoggerFactory.getLogger(FttpClientImpl.class);
 
-    private static String PSEUDONYM_PATTERN_STRING = "(?<source>[^/]+)/(?<original>[^/]+)";
+    private static final String PSEUDONYM_PATTERN_STRING = "(?<source>[^/]+)/(?<original>[^/]+)";
     private static final Pattern DIC_PSEUDONYM_PATTERN = Pattern.compile(PSEUDONYM_PATTERN_STRING);
     private final IRestfulClientFactory clientFactory;
     private final String fttpServerBase;

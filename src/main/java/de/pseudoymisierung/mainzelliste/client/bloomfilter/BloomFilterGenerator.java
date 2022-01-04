@@ -3,8 +3,6 @@ package de.pseudoymisierung.mainzelliste.client.bloomfilter;
 import de.pseudonymisierung.mainzelliste.client.fttp.bloomfilter.RandomRecordBloomFilterGenerator;
 import de.pseudonymisierung.mainzelliste.client.fttp.normalization.FieldsNormalization;
 
-import de.ukhd.medic.mpi.MpiRunner;
-
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +12,7 @@ public class BloomFilterGenerator {
     private static final String HOST = "icwmpi99";
     private static final int ICW_PDQ_PORT = 3750;
 
-    public static String generateBloomFilter(HashMap<String, String> idat) throws Exception {
+    public static String generateBloomFilter(HashMap<String, String> idat) {
         // define how idat fields will be normalize
         Properties normalizationConfig = new Properties();
         normalizationConfig.put("field.firstName.transformer.0.type", "StringFieldTransformer");
