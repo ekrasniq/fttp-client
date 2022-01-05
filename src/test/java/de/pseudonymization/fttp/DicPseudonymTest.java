@@ -10,9 +10,9 @@ import java.util.HashMap;
 public class DicPseudonymTest {
 
     public static void main(String[] args) {
-        // set the parameters for the MpiRunner to get the Idat
+        // set the parameters for the MpiRunner to get the idats
         String pid = "";
-        String pidAssigningAuthorityUniversalId = "";
+        String pidAssigningAuthorityUniversalId = "123";
         String pathToTrustCertificateFile = "src/test/resources/ukhd-chain-with-root.pem";
         String pathToClientCertificateFile = "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.pem";
         String pathToClientCertificatePrivateKeyFile = "src/test/resources/star.medic.dev.krz.uni-heidelberg.de.privatekey.pem";
