@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class DicPseudonymTest {
 
     public static void main(String[] args) {
-        // set the parameters for the MpiRunner to get the idat
+        // set the parameters for the MpiRunner to get the Idat
         String pid = "";
         String pidAssigningAuthorityUniversalId = "";
         String pathToTrustCertificateFile = "src/test/resources/ukhd-chain-with-root.pem";
